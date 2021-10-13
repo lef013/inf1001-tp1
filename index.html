@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icon de l'onglet du navigateur-->
+    <link rel="icon" href="favicon.ico" type="image/ico" />
+    <!-- Titre de l'onglet du navigateur-->
+    <title>INF1001</title>
+    <meta name="description" content="Travail pratique 1" />
+    <meta name="author" content="Mathieu Lefebvre" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/classes.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Vous pouvez utiliser cette image ou d'autre image de HTML 5 -->
+      <img src="./images//html5.png" alt="HTML5" />
+      <!-- (Heading 1) -->
+      <h1>Introduction</h1>
+      <!-- (Text Normal , Times New Roman 13 ou 14) -->
+      <p>
+        Un hyperlien permet de lier un document HTML avec une autre ressource du Web: image, programme, document HTML
+        (voir http://www.w3schools.com/), section dans un document HTML,
+      </p>
+      <!-- (Texte à puces, Times New Roman 13 ou 14) -->
+      <ul>
+        <li>
+          Un hyperlien à 2 extrémités appelées ancres: la source: point de départ de l'hyperlien et la destination:
+          point d'arrivée du lien.
+        </li>
+        <li>La destination de l'hyperlien est donnée par son URL</li>
+        <li>Élément a (a pour ancre)</li>
+      </ul>
+      <ol class="parentOl">
+        <!-- 1. (Heading 2) -->
+        <h2><li class="childLi">Adressage des ressources</li></h2>
+        <ol class="parentOl">
+          <!--  -->
+          <!-- Pas capable d'enlever l'espace du ::marker -->
+          <h3><li class="childLiLi">Adresse de base</li></h3>
+          <p>
+            Chaque adresse URL a une adresse de base : c’est la partie de l’URL excluant ce qui suit le dernier « / ».
+            Par exemple : L’adresse de base de <br />
+            http://www.uqtr.ca/~touref/INF1001/index.html est http://www.uqtr.ca/~touref/INF1001/ Habituellement le
+            navigateur considère que l’adresse de base par défaut est l’adresse de base<br />
+            du document. La balise dans l’entête du document permet donner une adresse de base par défaut différente de
+            celle du document.
+          </p>
+          <h3><li class="childLiLi">URL relatif</li></h3>
+          <p class="mediumFontSize">
+            L'attribut href spécifie l'URL de la destination de l'hyperlien. Cet URL peut être
+          </p>
+          <ul class="mediumFontSize">
+            <li>
+              Absolu: pour identifier une ressource indépendamment du contexte.
+              http://www.tuteurs.ens.fr/internet/web/html/bases.html
+            </li>
+            <li>
+              Relatif: pour identifier une ressource dépendamment du contexte. Ce contexte est donné par l'adresse de
+              base.
+            </li>
+            <br />
+            <li style="list-style-type: none">
+              <strong>Par exemple,</strong><br />
+              si l'adresse de base est http://www.uqtr.ca/~touref/INF1001/documents/, alors l'URL relatif
+              lien/lesport.jpg désigne l'URL absolu<br />http://www.uqtr.ca/~touref/INF1001/documents/lien/lesport.jpg
+            </li>
+          </ul>
+        </ol>
+      </ol>
+      <img src="./images/solar_system.jpg" alt="solar_system_image" usemap="#solarsystem" />
+      <map name="solarsystem">
+        <area
+          shape="circle"
+          coords="232, 348, 28"
+          href="https://en.wikipedia.org/wiki/Mercury_(planet)"
+          target="_blank"
+          alt="mercury_link"
+        />
+        <area
+          shape="circle"
+          coords="340, 310, 50"
+          href="https://en.wikipedia.org/wiki/Earth"
+          target="_blank"
+          alt="earth_link"
+        />
+      </map>
+      <!-- Tableau 1  (Heading 2) -->
+      <h2>Tableau 1:Symboles utilisés dans les URL relatifs:</h2>
+      <table>
+        <tr>
+          <td>.</td>
+          <td>Répertoire courant</td>
+        </tr>
+        <tr>
+          <td>.</td>
+          <td>Répertoire parent</td>
+        </tr>
+        <tr>
+          <td>/</td>
+          <td>Remplace le répertoir de base</td>
+        </tr>
+        <tr>
+          <td>//</td>
+          <td>Remplace à partir du nom du serveur</td>
+        </tr>
+      </table>
+      <br />
+      <!-- https://developers.google.com/youtube/iframe_api_reference -->
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/1Z1JCuwXmiQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <br />
+      <div>
+        <img class="customImg" src="./images/mlefebvre.jpg" alt="mlefebvre" />
+        <p>Mathieu Lefebvre</p>
+      </div>
+    </div>
+  </body>
+</html>

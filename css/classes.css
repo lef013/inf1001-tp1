@@ -1,0 +1,46 @@
+.container {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-size: 14pt;
+}
+
+.mediumFontSize {
+  font-size: 12pt;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters#nesting_counters */
+
+.parentOl {
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.childLi {
+  counter-increment: item;
+  margin: 0;
+}
+
+.childLi:before {
+  content: counters(item, '.') '. ';
+}
+
+.childLiLi {
+  counter-increment: item;
+  margin: 0;
+}
+
+.childLiLi:before {
+  content: counters(item, '.') ' ';
+}
+
+table,
+td {
+  border: 1px solid black;
+}
+
+.customImg {
+  float: left;
+  width: 400px;
+  height: 400px;
+  margin: 0 15px 0 0;
+}
