@@ -38,9 +38,21 @@ td {
   border: 1px solid black;
 }
 
-.customImg {
-  float: left;
+/* Clear floats after image containers */
+.row::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.imageLeft {
   width: 400px;
   height: 400px;
-  margin: 0 15px 0 0;
+  margin: 0 5px 0 0;
+  float: left;
+}
+
+.textRight {
+  float: left;
+  margin: 0 5px 0 0;
 }
